@@ -1,19 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate Bangladesh</title>
-    <!-- Daisy UI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Bangladesh</title>
+  <!-- Daisy UI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <!-- Tailwindcss -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    <header>
-    </header>
-    <main>
-    </main>
-    <footer>
-    </footer>
-</body>
+
+<body class="bg-white min-h-screen">
+  <header class="sticky top-0 glass pb-1  mb-6">
+    <!-- Navigation -->
+    <nav class="bg-orange-50 pt-6 pb-12">
+      <div class="container mx-auto px-1 md:px-32 flex justify-between items-center">
+        <a href="#" class="btn custom-background uppercase text-black border-0">faq</a>
+        <div class="flex items-center gap-2">
+          <img src="assets/logo.png" alt="Donate Bangladesh Logo" class="h-8" />
+          <span class="font-bold sm:text-xl text-black">Donate Bangladesh</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="flex items-center">
+            <img src="assets/coin.png" alt="coin-logo">
+            <span class="font-bold" id="balance-display">5500 BDT</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Tabs with stronger text color enforcement -->
+    <div class="tabs sticky tabs-boxed max-w-md mx-auto my-6 bg-gray-100">
+      <button class="tab tab-active font-medium custom-background" id="donationTabBtn">Donation</button>
+      <button class="tab font-medium" id="historyTabBtn">History</button>
+    </div>
+  </header>
+  <main class="w-3/4 mx-auto">
+    <!-- Main Content Area -->
+    <section class="flex flex-col md:flex-row gap-8">
+      <!-- Noakhali Flood Area -->
+      <div class="w-full md:w-1/2">
+        <img src="assets/noakhali.png" alt="noakhali flood image" srcset="">
+      </div>
+      <div class="w-full md:w-1/2 flex flex-col justify-between">
+        <div class="flex items-center justify-center bg-gray-50 w-28 mb-4 p-1">
+          <img src="assets/coin.png" alt="money symbol">
+          <span class="px-2">0 BDT</span>
+        </div>
+        <h3 class="text-black font-bold text-xl">Donate for Flood at Noakhali, Bangladesh</h3>
+        <p class="mt-4"> The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
+          donation will help provide essential supplies and to those affected by this disaster. Every contribution, big
+          or small, makes difference. Please join us in supporting the relief efforts and making a positive impact on
+          the lives of those in need.</p>
+        <fieldset class="fieldset mt-5">
+          <input type="text"
+            class="input w-full text-white placeholder-gray-300 bg-transparent border border-gray-200 rounded p-2 focus:outline-none focus:border-blue-300"
+            placeholder="Write Donation Amount" />
+          <button class="btn custom-background text-black border-0 mt-4 w-full">Donate Now</button>
+        </fieldset>
+      </div>
+    </section>
+    <div class="divider my-16"></div>
+    <section class="flex flex-col md:flex-row gap-8">
+      <!-- Feni Flood Aread -->
+      <div class="w-full md:w-1/2">
+        <img src="assets/feni.png" alt="noakhali flood image" srcset="">
+      </div>
+      <div class="w-full md:w-1/2 flex flex-col justify-between">
+        <div class="flex items-center justify-center bg-gray-50 w-28 mb-4 p-1">
+          <img src="assets/coin.png" alt="money symbol">
+          <span class="px-2">600 BDT</span>
+        </div>
+        <h3 class="text-black font-bold text-xl">Donate for Flood Relief in Feni,Bangladesh</h3>
+        <p class="mt-4"> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+        <fieldset class="fieldset mt-5">
+          <input type="text"
+            class="input w-full text-white placeholder-gray-300 bg-transparent border border-gray-200 rounded p-2 focus:outline-none focus:border-blue-300"
+            placeholder="Write Donation Amount" />
+          <button class="btn custom-background text-black border-0 mt-4 w-full">Donate Now</button>
+        </fieldset>
+      </div>
+    </section>
+    <div class="divider my-16"></div>
+    <section class="flex flex-col md:flex-row gap-8">
+      <!-- Quota Movement -->
+      <div class="w-full md:w-1/2">
+        <img src="assets/quota-protest.png" alt="noakhali flood image" srcset="">
+      </div>
+      <div class="w-full md:w-1/2 flex flex-col justify-between">
+        <div class="flex items-center justify-center bg-gray-50 w-28 mb-4 p-1">
+          <img src="assets/coin.png" alt="money symbol">
+          <span class="px-2">2400 BDT</span>
+        </div>
+        <h3 class="text-black font-bold text-xl">Aid for Injured in the Quota Movement</h3>
+        <p class="mt-4"> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+        <fieldset class="fieldset mt-5">
+          <input type="text"
+            class="input w-full text-white placeholder-gray-300 bg-transparent border border-gray-200 rounded p-2 focus:outline-none focus:border-blue-300"
+            placeholder="Write Donation Amount" />
+          <button class="btn custom-background text-black border-0 mt-4 w-full">Donate Now</button>
+        </fieldset>
+      </div>
+    </section>
+    <div class="divider my-16"></div>
+
+  </main>
+  <footer class="bg-orange-50 h-12 py-12 text-center">
+    <p class="text-sm">&copy; All rights resereved by NHSDU</p>
+  </footer>
+  <!-- JavaScript -->
+  <script src="js/utilities.js"></script>
+  <script src="js/features.js"></script>
+
 </html>
