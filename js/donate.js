@@ -1,17 +1,52 @@
-// Getting the input field value 
-let newBalance = 0;
-let initialBalance = getInnerTextByIdName ('balance-display');
-initialBalance = parseFloat(initialBalance);
+// Nowakhali Donation Code
+let initialNoakhaliBalance = getInnerTextByIdName ('noakhali-donation-balance'); //Gets inital balance
+initialNoakhaliBalance = parseFloat (initialNoakhaliBalance); //Converts that into number
+let initialGlobalBalance = getInnerTextByIdName ('balance-display'); //Gets global balance
+initialGlobalBalance = parseFloat(initialGlobalBalance); //Converts that into number
+// Adds event listener on Noakhali Btn
 document.getElementById('btn-noakhali-donation').addEventListener('click', function () {
     // Get the vlaue from the input field 
     const donationAmont = getValueByIdName('noakhali-donation');
-    // console.log(donationAmont);
-    // Clear the Input Field 
+    // Clears the Input Field 
     document.getElementById ('noakhali-donation').value = '';
-    newBalance = parseFloat(newBalance) + parseFloat(donationAmont);
-    // let donationBalance = document.getElementById ('noakhali-donation-balance').value = newBalance;
+    initialNoakhaliBalance = initialNoakhaliBalance + parseFloat(donationAmont);
     // // Update Balance 
-    // console.log(donationBalance);
-    document.getElementById ('noakhali-donation-balance').innerText = newBalance + ' BDT';
-    document.getElementById ('balance-display').innerText = initialBalance - newBalance + 'BDT';
+    document.getElementById ('noakhali-donation-balance').innerText = initialNoakhaliBalance + ' BDT';
+    // Update Golbal Balance 
+    initialGlobalBalance = initialGlobalBalance - donationAmont;
+    document.getElementById ('balance-display').innerText = initialGlobalBalance + 'BDT';
+});
+
+// Feni Donation Code
+let initialFeniBalance = getInnerTextByIdName ('feni-donation-balance'); //Gets inital balance
+initialFeniBalance = parseFloat (initialFeniBalance); //Converts that into number
+// Adds event listener on Feni Btn
+document.getElementById('btn-feni-donation').addEventListener('click', function () {
+    // Get the vlaue from the input field 
+    const donationAmont = getValueByIdName('feni-donation');
+    // Clears the Input Field 
+    document.getElementById ('feni-donation').value = '';
+    initialFeniBalance = initialFeniBalance + parseFloat(donationAmont);
+    // // Update Balance 
+    document.getElementById ('feni-donation-balance').innerText = initialFeniBalance + ' BDT';
+    // Update Golbal Balance 
+    initialGlobalBalance = initialGlobalBalance - donationAmont;
+    document.getElementById ('balance-display').innerText = initialGlobalBalance + 'BDT';
+});
+
+// Quota Donation Code 
+let initialQuotaBalance = getInnerTextByIdName ('quota-donation-balance');
+initialQuotaBalance = parseFloat (initialQuotaBalance); //Converts that into number
+// Adds event listener on Feni Btn
+document.getElementById('btn-quota-donation').addEventListener('click', function () {
+    // Get the vlaue from the input field 
+    const donationAmont = getValueByIdName('quota-donation');
+    // Clears the Input Field 
+    document.getElementById ('quota-donation').value = '';
+    initialQuotaBalance = initialQuotaBalance + parseFloat(donationAmont);
+    // // Update Balance 
+    document.getElementById ('quota-donation-balance').innerText = initialQuotaBalance + ' BDT';
+    // Update Golbal Balance 
+    initialGlobalBalance = initialGlobalBalance - donationAmont;
+    document.getElementById ('balance-display').innerText = initialGlobalBalance + 'BDT';
 });
