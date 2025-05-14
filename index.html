@@ -45,9 +45,9 @@
         <img src="assets/noakhali.png" alt="noakhali flood image" srcset="">
       </div>
       <div class="w-full md:w-1/2 flex flex-col justify-between">
-        <div class="flex items-center justify-center bg-gray-50 w-28 mb-4 p-1">
+        <div class="flex items-center justify-center bg-gray-50 w-32 mb-4 p-1">
           <img src="assets/coin.png" alt="money symbol">
-          <span class="px-2">0 BDT</span>
+          <span id="noakhali-donation-balance" class="px-2">0 BDT</span>
         </div>
         <h3 class="text-black font-bold text-xl">Donate for Flood at Noakhali, Bangladesh</h3>
         <p class="mt-4"> The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
@@ -55,15 +55,15 @@
           or small, makes difference. Please join us in supporting the relief efforts and making a positive impact on
           the lives of those in need.</p>
         <fieldset class="fieldset mt-5">
-          <input type="text"
-            class="input w-full text-white placeholder-gray-300 bg-transparent border border-gray-200 rounded p-2 focus:outline-none focus:border-blue-300"
+          <input id="noakhali-donation" type="text"
+            class="input w-full text-black placeholder-gray-300 bg-transparent border border-gray-200 rounded p-2 focus:outline-none focus:border-blue-300"
             placeholder="Write Donation Amount" />
-          <button class="btn custom-background text-black border-0 mt-4 w-full">Donate Now</button>
+          <button id="btn-noakhali-donation" class="btn custom-background text-black border-0 mt-4 w-full">Donate Now</button>
         </fieldset>
       </div>
     </section>
     <div class="divider my-16"></div>
-    <section class="flex flex-col md:flex-row gap-8">
+    <section class="hidden flex-col md:flex-row gap-8">
       <!-- Feni Flood Aread -->
       <div class="w-full md:w-1/2">
         <img src="assets/feni.png" alt="noakhali flood image" srcset="">
@@ -84,7 +84,7 @@
       </div>
     </section>
     <div class="divider my-16"></div>
-    <section class="flex flex-col md:flex-row gap-8">
+    <section class="hidden flex-col md:flex-row gap-8">
       <!-- Quota Movement -->
       <div class="w-full md:w-1/2">
         <img src="assets/quota-protest.png" alt="noakhali flood image" srcset="">
@@ -110,8 +110,24 @@
   <footer class="bg-orange-50 h-12 py-12 text-center">
     <p class="text-sm">&copy; All rights resereved by NHSDU</p>
   </footer>
+
+  <!-- Success Modal -->
+  <div id="successModal" class="modal">
+    <div class="modal-box text-center">
+      <h3 class="font-bold text-3xl mb-8">Congrates!</h3>
+      <div class="flex justify-center mb-6">
+        <span class="text-amber-500 text-5xl">⓵</span>
+      </div>
+      <p class="text-xl mb-2">You Have Donated for Humankind</p>
+      <p class="text-2xl font-bold mb-8">Successfully</p>
+      <div class="modal-action justify-center">
+        <button class="btn"">close confirmation</button>
+      </div>
+    </div>
+  </div>
   <!-- JavaScript -->
   <script src="js/utilities.js"></script>
   <script src="js/features.js"></script>
+  <script src="js/donate.js"></script>
 
 </html>
