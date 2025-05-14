@@ -20,9 +20,24 @@ document.getElementById('btn-noakhali-donation').addEventListener('click', funct
         document.getElementById ('noakhali-donation').value = '';
         return 0;        
     }
+    // Shows comformation 
+    showConfirmation();
     // Clears the Input Field 
     document.getElementById ('noakhali-donation').value = '';
     initialNoakhaliBalance = initialNoakhaliBalance + donationAmont;
+    // Adds to history
+    const historyTab = document.getElementById ('history-tab');
+    const historyItem =document.createElement('div');
+    historyItem.classList.add ('m-4', 'p-4', 'bg-gray-100', 'rounded-lg');
+    const currentDate = new Date();
+    const dateString = currentDate.toLocaleString();
+    const donationTitel = getInnerTextByIdName ('noakhali-title');
+    
+    historyItem.innerHTML = `
+    <h4 class="text-xl font-bold">Donation: ${donationAmont} BDT to ${donationTitel} </h4>
+    <p> Date & Time: ${dateString}</p>
+    `
+    historyTab.appendChild(historyItem);
     // // Update Balance 
     document.getElementById ('noakhali-donation-balance').innerText = initialNoakhaliBalance + ' BDT';
     // Update Golbal Balance 
@@ -50,10 +65,25 @@ document.getElementById('btn-feni-donation').addEventListener('click', function 
         document.getElementById ('feni-donation').value = '';
         return 0;        
     }
+    // Shows comformation 
+    showConfirmation();
     // Clears the Input Field 
     document.getElementById ('feni-donation').value = '';
-    initialFeniBalance = initialFeniBalance + parseFloat(donationAmont);
+    // Adds to history
+    const historyTab = document.getElementById ('history-tab');
+    const historyItem =document.createElement('div');
+    historyItem.classList.add ('m-4', 'p-4', 'bg-gray-100', 'rounded-lg');
+    const currentDate = new Date();
+    const dateString = currentDate.toLocaleString();
+    const donationTitel = getInnerTextByIdName ('feni-title');
+    
+    historyItem.innerHTML = `
+    <h4 class="text-xl font-bold">Donation: ${donationAmont} BDT to ${donationTitel} </h4>
+    <p> Date & Time: ${dateString}</p>
+    `
+    historyTab.appendChild(historyItem);
     // // Update Balance 
+    initialFeniBalance = initialFeniBalance + parseFloat(donationAmont);
     document.getElementById ('feni-donation-balance').innerText = initialFeniBalance + ' BDT';
     // Update Golbal Balance 
     initialGlobalBalance = initialGlobalBalance - donationAmont;
@@ -80,6 +110,21 @@ document.getElementById('btn-quota-donation').addEventListener('click', function
         document.getElementById ('quota-donation').value = '';
         return 0;        
     }
+    // Shows comformation 
+    showConfirmation();
+    // Adds to history
+    const historyTab = document.getElementById ('history-tab');
+    const historyItem =document.createElement('div');
+    historyItem.classList.add ('m-4', 'p-4', 'bg-gray-100', 'rounded-lg');
+    const currentDate = new Date();
+    const dateString = currentDate.toLocaleString();
+    const donationTitel = getInnerTextByIdName ('quota-title');
+    
+    historyItem.innerHTML = `
+    <h4 class="text-xl font-bold">Donation: ${donationAmont} BDT to ${donationTitel} </h4>
+    <p> Date & Time: ${dateString}</p>
+    `
+    historyTab.appendChild(historyItem);
     // Clears the Input Field 
     document.getElementById ('quota-donation').value = '';
     initialQuotaBalance = initialQuotaBalance + donationAmont;

@@ -11,12 +11,3 @@ function validateDonationAmount (amount) {
   //check if the donation amount is a valid number or greater than 0;
   return !isNaN(amount) && amount > 0;
 }
-// Show modal function
-function showConfirmation() {
-    document.getElementById('successModal').classList.add('modal-open');
-  }
-
-  // Close modal function
-  function closeModal() {
-    document.getElementById('successModal').classList.remove('modal-open');
-  }
